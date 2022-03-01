@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import api from './api.js';
+import produtosApi from '../../public/api/produtos.js';
 
 function getPreco(preco) {
     const precoFormatado = `R$ ${Number.parseFloat(preco).toFixed(2)}`;
@@ -8,17 +8,17 @@ function getPreco(preco) {
 
 class Produtos extends Component {
     render() {
-        const produtos = api.retorno.produtos
+        const produtos = produtosApi.retorno.produtos
 
         return (
                 produtos.map((value, index) => {
                     const produto = value.produto;
 
                     return (
-                        <ul key={produto.codigo}>
-                            <li>{produto.descricao}</li>
-                            <li>{produto.tipo}</li>
-                            <li>{getPreco(produto.preco)}</li>
+                        <ul className="produto__container container" key={produto.codigo}>
+                            <li className="produto__descricao">{produto.descricao}</li>
+                            <li className="produto__tipo">{produto.tipo}</li>
+                            <li className="produto__preco">{getPreco(produto.preco)}</li>
                         </ul>
                     )
                 })

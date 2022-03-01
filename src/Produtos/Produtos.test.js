@@ -1,14 +1,23 @@
 import '@testing-library/jest-dom'
 import {render} from '@testing-library/react';
-import Produtos from './Produtos';
+import Produtos from './Produtos.jsx';
+import produtosApi from "../../public/api/produtos"
+
 
 describe('Mostrar produtos', () => {
-    it('mostra o primeiro produto', () => {
-        const { getByText } = render(<Produtos/>);
-        expect(getByText('Caneta azul')).toBeInTheDocument();
+    it('Mostrar todos os produtos contidos na api', () => {
+        const {container} = render(<Produtos/>);
+        
+        let produtosMostrados = 0;
+        const quantidadeDeProdutos = produtosApi.retorno.produtos.length;
+
+        container.querySelectorAll('.produto__container').forEach(() => produtosMostrados++)
+        expect(produtosMostrados).toBe(quantidadeDeProdutos)
     })
     it('Mostra número decimal com duas casas', () => {
-        const {getAllByText} = render(<Produtos/>);
-        expect(getAllByText('R$ 1.00', {exact: true}).map(element => element.innerHTML === "R$ 1.00"));
+        const { container } = render(<Produtos/>);
+        container.querySelectorAll('.produto__preco').forEach(produto => {
+            expect(produto.innerHTML).toMatch(/R\$ \d+\.\d{2}/gm);
+        })
     })
 })
