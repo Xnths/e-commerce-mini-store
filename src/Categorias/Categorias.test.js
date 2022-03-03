@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import {render} from '@testing-library/react'
 import Categorias from './Categorias';
 
-import categorias from "../../public/api/categorias"
+import categorias from "../categorias"
 
 describe('Mostra as categorias principais', () => {
     it('Contêm todas as categorias registradas', () => {

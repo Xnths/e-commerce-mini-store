@@ -30,7 +30,7 @@ const produtosApi = {
                   "cest":"28.040.00",
                   "origem":"1",
                   "idGrupoProduto": "12345",
-                  "linkExterno": "https://minhaloja.com.br/cadeira-xyz-f5",
+                  "linkExterno": "https://minhaloja.com.br/caneta-azul",
                   "observacoes": "Observações da CADEIRA XYZ F5",
                   "grupoProduto": "Móveis",
                   "itensPorCaixa": 2,

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import categoriasApi from "../../public/api/categorias"
+import categoriasApi from "../categorias"
 
 class Categorias extends Component {
     render() {
