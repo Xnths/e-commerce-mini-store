@@ -1,18 +1,19 @@
+import { createBrowserHistory } from "history";
 import React, {Component} from "react";
-import { useLocation } from "react-router-dom";
+import {browserHistory } from "react-router-dom"
 
-export const LocationDisplay = () => {
-    const location = useLocation();
-    
-    return <div data-testid="location-display">{location.pathname}</div>
+var codigoProduto = getCodigo(window.location.search);
+
+function getCodigo(path) {
+    var params = new URLSearchParams(path);
+    return params.get('cod');
 }
 
 class Produto extends Component {
     render () {
         return (
             <div>
-                <h2></h2>
-                <LocationDisplay/>
+                <h2>{codigoProduto}</h2>
             </div>
         )
     }

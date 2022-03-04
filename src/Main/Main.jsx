@@ -14,6 +14,7 @@ class Main extends Component {
             <Router>
                 <Routes>
                     <Route path="/" element={<Produtos/>}/>
+                    <Route path="/produto" element={<Produto/>}/>
                 </Routes>
             </Router>
         )

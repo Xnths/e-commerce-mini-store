@@ -51,6 +51,6 @@ describe('Ao clicar em um produto', () => {
             </Router>
             )
 
-        expect(screen.getByTestId('location-display')).toHaveTextContent(route);
+        expect(window.location.href).toHaveTextContent(route);
     })
 })
