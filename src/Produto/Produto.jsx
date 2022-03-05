@@ -47,7 +47,11 @@ class Produto extends Component {
     render() {
         return (
             <div>
-                <h2>{this.state.produto.categoria}</h2>
+                <img src={this.state.produto.imagem}/>
+                <h2>{this.state.produto.descricao}</h2>
+                <p>{this.state.produto.categoria[0]}</p>
+                <p>{this.state.produto.preco}</p>
+                <p>{this.state.produto.descricaoComplementar}</p>
             </div>
         )
     }

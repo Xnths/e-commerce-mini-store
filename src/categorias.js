@@ -4,14 +4,35 @@ const categoriasApi =  {
             { 
                 "categoria":{ 
                     "id": 1,
-                    "descricao": "Casa",
+                    "descricao": "Escritório",
                     "idCategoriaPai": 0
                 }
             },
             {
                 "categoria":{ 
                     "id": 2,
-                    "descricao": "Casa, Mesa e Banho",
+                    "descricao": "Papelaria",
+                    "idCategoriaPai": 0
+                }
+            },
+            {
+                "categoria":{ 
+                    "id": 3,
+                    "descricao": "Material Escolar",
+                    "idCategoriaPai": 0
+                }
+            },
+            {
+                "categoria":{ 
+                    "id": 4,
+                    "descricao": "Supermercado",
+                    "idCategoriaPai": 0
+                }
+            },
+            {
+                "categoria":{ 
+                    "id": 5,
+                    "descricao": "Papelaria",
                     "idCategoriaPai": 0
                 }
             }

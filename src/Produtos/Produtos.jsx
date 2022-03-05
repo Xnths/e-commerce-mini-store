@@ -20,7 +20,7 @@ function Produtos(props) {
                     return (
                         <Link to={link} className="produto__container container" key={index}>
                             <li className="produto__descricao">{produto.descricao}</li>
-                            <li className="produto__tipo">{produto.tipo}</li>
+                            <li className="produto__tipo">{produto.produtoLoja.categoria.map(value => value.descricao.concat(" | "))}</li>
                             <li className="produto__preco">{getPreco(produto.preco)}</li>
                         </Link>
                     )
