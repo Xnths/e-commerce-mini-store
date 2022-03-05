@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import {
     Route,
     BrowserRouter as Router,
@@ -7,9 +7,7 @@ import {
 import Produtos from "../Produtos/Produtos";
 import Produto from "../Produto/Produto"
 
-class Main extends Component {
-    
-    render () {
+function Main(props) {
         return (
             <Router>
                 <Routes>
@@ -18,7 +16,6 @@ class Main extends Component {
                 </Routes>
             </Router>
         )
-    }
 }
 
 export default Main;
