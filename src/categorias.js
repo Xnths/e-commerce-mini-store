@@ -28,13 +28,6 @@ const categoriasApi =  {
                     "descricao": "Supermercado",
                     "idCategoriaPai": 0
                 }
-            },
-            {
-                "categoria":{ 
-                    "id": 5,
-                    "descricao": "Papelaria",
-                    "idCategoriaPai": 0
-                }
             }
         ]
     }
