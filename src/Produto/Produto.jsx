@@ -52,6 +52,7 @@ class Produto extends Component {
                 <p>{this.state.produto.categoria[0]}</p>
                 <p>{this.state.produto.preco}</p>
                 <p>{this.state.produto.descricaoComplementar}</p>
+                <button>Adicionar ao carrinho</button>
             </div>
         )
     }
