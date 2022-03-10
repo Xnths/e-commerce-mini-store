@@ -1,32 +1,49 @@
-import React from "react";
+import React, { Component } from "react";
 import {
     Route,
     BrowserRouter as Router,
     Routes
 } from "react-router-dom";
 import Produtos from "../Produtos/Produtos";
-import Produto from "../Produto/Produto";
-import Categorias from "../Categorias/Categorias"
+import Categorias from "../Categorias/Categorias";
+import MaisCategorias from "../MaisCategorias/MaisCategorias";
+import StatusCarrinho from "../StatusCarrinho/StatusCarrinho";
+import Carrinho from "../Carrinho/Carrinho";
+import { ComprasContext } from "../Context/ComprasContext";
 
-function Main(props) {
+class Main extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            unidadesCompradas: 0,
+            produtosComprados: []
+        }
+    }
+
+    render() {
         return (
-            <>
-                <header>
-                    <Categorias/>
-                </header>
-                <main>
-                    <Router>
+                <Router>
+                    <header>
+                        <ComprasContext.Provider value={this.context.unidadesCompradas}>
+                            <StatusCarrinho/>
+                        </ComprasContext.Provider>
+                        <Categorias/>
+                    </header>
+                    <main>
                         <Routes>
                             <Route path="/" element={<Produtos/>}/>
-                            <Route path="/produto" element={<Produto/>}/>
+                            <Route path="/categorias" element={<MaisCategorias/>}/>
+                            <Route path="/carrinho" element={<Carrinho/>}/>
                         </Routes>
-                    </Router>
-                </main>
-                <footer>
-                    Developed by <a href="https://www.github.com/xnths" target="_blank">Xnths</a>
-                </footer>
-            </>
-        )
+                    </main>
+                    <footer>
+                        Developed by <a href="https://www.github.com/xnths" target="_blank">Xnths</a>
+                    </footer>
+                </Router>
+            )
+    }  
 }
+
+Main.contextType = ComprasContext;
 
 export default Main;

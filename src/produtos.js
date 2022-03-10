@@ -46,17 +46,9 @@ const produtosApi = {
                   "descricaoFornecedor": "Descrição do fornecedor",
                   "imagem":[
                      {
-                     "link": "http://teste05.s3.amazonaws.com/10b19a1b6dfd022cfaa65172dab740ba/184c75cb44203396e7c281cd7892576c?AWSAccessKeyId=AKIAIRKPH2R4VDLL422A&Expires=1506023235&Signature=ayQ0dzsFwBLqREsvcdDVrTTVGIg%3D",
+                     "link": "",
                      "validade": "10/09/2017",
                      "tipoArmazenamento": "interno"
-                     },{
-                     "link": "http://teste05.s3.amazonaws.com/10b19a1b6dfd022cfaa65172dab740ba/58f39bca9d794571bae24ac1fd29ae67?AWSAccessKeyId=AKIAIRKPH2R4VDLL422A&Expires=1506023235&Signature=URYAB1fZFLjrlKQQKPsYf2WLFFc%3D",
-                     "validade": "10/09/2017",
-                     "tipoArmazenamento":"interno"
-                     },{
-                        "link": "http://teste05.s3.amazonaws.com/10b19a1b6dfd022cfaa65172dab740ba/774ba89cbea1fdfc7e4442f9306f2136?AWSAccessKeyId=AKIAIRKPH2R4VDLL422A&Expires=1506023235&Signature=3otgTawOYy8wiwUH0sDKX2Ipcvc%3D",
-                        "validade": "S/ Validade",
-                        "tipoArmazenamento":"externo"
                      }],
                   "produtoLoja": {
                            "preco": {
@@ -139,17 +131,9 @@ const produtosApi = {
                   "descricaoFornecedor": "Descrição do fornecedor",
                   "imagem":[
                      {
-                     "link": "http://teste05.s3.amazonaws.com/10b19a1b6dfd022cfaa65172dab740ba/184c75cb44203396e7c281cd7892576c?AWSAccessKeyId=AKIAIRKPH2R4VDLL422A&Expires=1506023235&Signature=ayQ0dzsFwBLqREsvcdDVrTTVGIg%3D",
+                     "link": "",
                      "validade": "10/09/2017",
                      "tipoArmazenamento": "interno"
-                     },{
-                     "link": "http://teste05.s3.amazonaws.com/10b19a1b6dfd022cfaa65172dab740ba/58f39bca9d794571bae24ac1fd29ae67?AWSAccessKeyId=AKIAIRKPH2R4VDLL422A&Expires=1506023235&Signature=URYAB1fZFLjrlKQQKPsYf2WLFFc%3D",
-                     "validade": "10/09/2017",
-                     "tipoArmazenamento":"interno"
-                     },{
-                        "link": "http://teste05.s3.amazonaws.com/10b19a1b6dfd022cfaa65172dab740ba/774ba89cbea1fdfc7e4442f9306f2136?AWSAccessKeyId=AKIAIRKPH2R4VDLL422A&Expires=1506023235&Signature=3otgTawOYy8wiwUH0sDKX2Ipcvc%3D",
-                        "validade": "S/ Validade",
-                        "tipoArmazenamento":"externo"
                      }],
                   "produtoLoja": {
                            "preco": {
@@ -227,17 +211,9 @@ const produtosApi = {
                   "descricaoFornecedor": "Descrição do fornecedor",
                   "imagem":[
                      {
-                     "link": "http://teste05.s3.amazonaws.com/10b19a1b6dfd022cfaa65172dab740ba/184c75cb44203396e7c281cd7892576c?AWSAccessKeyId=AKIAIRKPH2R4VDLL422A&Expires=1506023235&Signature=ayQ0dzsFwBLqREsvcdDVrTTVGIg%3D",
+                     "link": "",
                      "validade": "10/09/2017",
                      "tipoArmazenamento": "interno"
-                     },{
-                     "link": "http://teste05.s3.amazonaws.com/10b19a1b6dfd022cfaa65172dab740ba/58f39bca9d794571bae24ac1fd29ae67?AWSAccessKeyId=AKIAIRKPH2R4VDLL422A&Expires=1506023235&Signature=URYAB1fZFLjrlKQQKPsYf2WLFFc%3D",
-                     "validade": "10/09/2017",
-                     "tipoArmazenamento":"interno"
-                     },{
-                        "link": "http://teste05.s3.amazonaws.com/10b19a1b6dfd022cfaa65172dab740ba/774ba89cbea1fdfc7e4442f9306f2136?AWSAccessKeyId=AKIAIRKPH2R4VDLL422A&Expires=1506023235&Signature=3otgTawOYy8wiwUH0sDKX2Ipcvc%3D",
-                        "validade": "S/ Validade",
-                        "tipoArmazenamento":"externo"
                      }],
                   "produtoLoja": {
                            "preco": {
