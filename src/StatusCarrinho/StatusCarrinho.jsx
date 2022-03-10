@@ -3,29 +3,25 @@ import { Link } from "react-router-dom";
 import {ComprasContext} from "../Context/ComprasContext"
 
 
-class StatusCompra extends Component {
+class StatusCarrinho extends Component {
     constructor(props) {
         super(props);
         this.state = {
             unidadesCompradas: 0
         }
     }
-
-    mostraCarrinho(context){
-        return (
-            <Link to="/carrinho">Carrinho: {context}</Link>
-        )
+    
+    atualizaCarrinho(){
+        this.setState({unidadesCompradas: this.context.unidadesCompradas + 1})
     }
 
     render () {
         return (
-            <ComprasContext.Consumer>
-                {this.mostraCarrinho.bind(this, this.context)}
-            </ComprasContext.Consumer>
+            <Link to="/carrinho">Carrinho: {this.state.unidadesCompradas}</Link>
         )
     }
 }
 
-StatusCompra.contextType = ComprasContext;
+StatusCarrinho.contextType = ComprasContext;
 
-export default StatusCompra;
+export default StatusCarrinho;

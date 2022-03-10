@@ -15,6 +15,7 @@ class Produtos extends Component {
     }
 
     adicionarAoCarrinho(produto){
+        this.props.adicionaAoCarrinho();
         this.context.unidadesCompradas++;
         console.log(this.context.produtosComprados)
         this.context.produtosComprados.push(produto);

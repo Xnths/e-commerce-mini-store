@@ -18,20 +18,23 @@ class Main extends Component {
             unidadesCompradas: 0,
             produtosComprados: []
         }
+        this.child = React.createRef();
+    }
+
+    adicionaAoCarrinho() {
+        this.child.current.atualizaCarrinho();
     }
 
     render() {
         return (
                 <Router>
                     <header>
-                        <ComprasContext.Provider value={this.context.unidadesCompradas}>
-                            <StatusCarrinho/>
-                        </ComprasContext.Provider>
+                        <StatusCarrinho ref={this.child}/>
                         <Categorias/>
                     </header>
                     <main>
                         <Routes>
-                            <Route path="/" element={<Produtos/>}/>
+                            <Route path="/" element={<Produtos adicionaAoCarrinho={this.adicionaAoCarrinho.bind(this)}/>}/>
                             <Route path="/categorias" element={<MaisCategorias/>}/>
                             <Route path="/carrinho" element={<Carrinho/>}/>
                         </Routes>
