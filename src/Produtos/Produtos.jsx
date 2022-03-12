@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import { ComprasContext } from "../Context/ComprasContext";
+import getPreco from "../Helper/getPreco";
 import produtosApi from '../produtos';
-
-function getPreco(preco) {
-    const precoFormatado = `R$ ${Number.parseFloat(preco).toFixed(2)}`;
-    return precoFormatado;
-}
 
 class Produtos extends Component {
     constructor(props) {
