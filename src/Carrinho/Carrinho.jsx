@@ -8,10 +8,12 @@ class Carrinho extends Component {
    
     render() {
         return (
-            this.context.produtosComprados.map(produto => {
+            this.context.compras.map(compra => {
+                console.log(compra);
+                const produto = compra.produto
                 return (
                         <ul key={produto.codigo}>
-                            <li>{produto.descricao}</li>
+                            <li>{produto.descricao} ({compra.quantidade}x)</li>
                             <li>{getPreco(produto.preco)}</li>
                         </ul>
                     )
