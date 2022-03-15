@@ -9,7 +9,6 @@ class Carrinho extends Component {
     render() {
         return (
             this.context.compras.map(compra => {
-                console.log(compra);
                 const produto = compra.produto
                 return (
                         <ul key={produto.codigo}>

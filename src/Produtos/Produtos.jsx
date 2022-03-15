@@ -27,8 +27,6 @@ class Produtos extends Component {
                 quantidade: 1
             });
         }
-        console.log(compras.length)
-        console.log(compras)
     }
     
     render() {
