@@ -20,6 +20,10 @@ class Main extends Component {
         }
         this.child = React.createRef();
     }
+    
+    removerDoCarrinho(){
+        this.child.current.atualizaCarrinho();
+    }
 
     adicionaAoCarrinho() {
         this.child.current.atualizaCarrinho();
@@ -36,7 +40,7 @@ class Main extends Component {
                         <Routes>
                             <Route path="/" element={<Produtos adicionaAoCarrinho={this.adicionaAoCarrinho.bind(this)}/>}/>
                             <Route path="/categorias" element={<MaisCategorias/>}/>
-                            <Route path="/carrinho" element={<Carrinho/>}/>
+                            <Route path="/carrinho" element={<Carrinho removerDoCarrinho={this.removerDoCarrinho.bind(this)}/>}/>
                         </Routes>
                     </main>
                     <footer>

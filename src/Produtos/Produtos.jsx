@@ -11,14 +11,15 @@ class Produtos extends Component {
     }
 
     adicionarAoCarrinho(produto){
-        this.props.adicionaAoCarrinho();
         this.context.unidadesCompradas++;
         
         const compras = this.context.compras;
         
         if(this.context.codigos.includes(produto.codigo)){
             compras.forEach(compra => {
-                if(compra.produto.codigo === produto.codigo) compra.quantidade++;
+                if(compra.produto.codigo === produto.codigo){   
+                    compra.quantidade++;
+                }
             })
         } else {
             this.context.codigos.push(produto.codigo);
@@ -27,6 +28,7 @@ class Produtos extends Component {
                 quantidade: 1
             });
         }
+        this.props.adicionaAoCarrinho();
     }
     
     render() {

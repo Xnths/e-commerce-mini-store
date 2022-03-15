@@ -12,7 +12,7 @@ class StatusCarrinho extends Component {
     }
     
     atualizaCarrinho(){
-        this.setState({unidadesCompradas: this.context.unidadesCompradas + 1})
+        this.setState({unidadesCompradas: this.context.unidadesCompradas})
     }
 
     render () {
