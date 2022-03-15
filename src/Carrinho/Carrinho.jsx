@@ -18,13 +18,14 @@ class Carrinho extends Component {
         this.context.unidadesCompradas -= compra.quantidade;
         
         compras.splice(posicaoCompra, 1);
+        this.context.codigos.splice(this.context.codigos.indexOf(compra.produto.codigo), 1);
 
         this.props.removerDoCarrinho();
         this.setState({compras: compras});
     }
 
     componentDidMount(){
-        this.setState({compras: this.context.compras})
+        this.setState({compras: this.context.compras});
     }
 
     render() {
