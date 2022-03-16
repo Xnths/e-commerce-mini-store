@@ -18,27 +18,33 @@ class Main extends Component {
             unidadesCompradas: 0,
             produtosComprados: []
         }
-        this.child = React.createRef();
+        this.childCarrinho = React.createRef();
+        this.childProdutos = React.createRef();
+    }
+
+    atualizaProdutos() {
+        this.childProdutos.current.atualizaProduto();
     }
     
     removerDoCarrinho(){
-        this.child.current.atualizaCarrinho();
+        this.childCarrinho.current.atualizaCarrinho();
     }
 
     adicionaAoCarrinho() {
-        this.child.current.atualizaCarrinho();
+        this.childCarrinho.current.atualizaCarrinho();
     }
 
     render() {
         return (
                 <Router>
                     <header>
-                        <StatusCarrinho ref={this.child}/>
+                        <StatusCarrinho ref={this.childCarrinho}/>
                         <Categorias/>
                     </header>
                     <main>
                         <Routes>
                             <Route path="/" element={<Produtos adicionaAoCarrinho={this.adicionaAoCarrinho.bind(this)}/>}/>
+                            <Route path="/search" element={<Produtos ref={this.childProdutos} adicionaAoCarrinho={this.adicionaAoCarrinho.bind(this)}/>}/>
                             <Route path="/categorias" element={<MaisCategorias/>}/>
                             <Route path="/carrinho" element={<Carrinho removerDoCarrinho={this.removerDoCarrinho.bind(this)}/>}/>
                         </Routes>

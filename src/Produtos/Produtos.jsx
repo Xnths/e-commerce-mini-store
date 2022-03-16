@@ -10,11 +10,15 @@ class Produtos extends Component {
         this.state = {produtos: this.getProdutos()}
     }
 
+    atualizaProdutos(){
+        this.setState({produtos: this.getProdutos()})
+    }
+
     getProdutos() {
         const searchParams = new URLSearchParams(window.location.search)
         let categoriaProcurada = searchParams.get('categoria');
 
-        if(searchParams != null){
+        if(categoriaProcurada != null){
             return this.produtos.filter(value => {
                 if(value.produto.produtoLoja.categoria.findIndex(categoria => categoria.descricao !== categoriaProcurada)){
                     console.log(value);
@@ -22,6 +26,7 @@ class Produtos extends Component {
                 }
             })
         }
+        return this.produtos;
     }
 
     adicionarAoCarrinho(produto){
