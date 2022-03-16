@@ -7,12 +7,26 @@ class Produtos extends Component {
     constructor(props) {
         super(props);
         this.produtos = produtosApi.retorno.produtos;
-        this.state = {produto: ''}
+        this.state = {produtos: this.getProdutos()}
+    }
+
+    getProdutos() {
+        const searchParams = new URLSearchParams(window.location.search)
+        let categoriaProcurada = searchParams.get('categoria');
+
+        if(searchParams != null){
+            return this.produtos.filter(value => {
+                if(value.produto.produtoLoja.categoria.findIndex(categoria => categoria.descricao !== categoriaProcurada)){
+                    console.log(value);
+                    return value;
+                }
+            })
+        }
     }
 
     adicionarAoCarrinho(produto){
         this.context.unidadesCompradas++;
-        
+
         const compras = this.context.compras;
         
         if(this.context.codigos.includes(produto.codigo)){
@@ -34,7 +48,7 @@ class Produtos extends Component {
     render() {
         return (
             <div>
-                {this.produtos.map((value, index) => {
+                {this.state.produtos.map((value, index) => {
                     const produto = value.produto;
                         return (
                             <ul key={produto.codigo}>
